@@ -1,0 +1,23 @@
+Options -Indexes
+DirectoryIndex index.php
+
+<FilesMatch "tools\.sh|\.env">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+RewriteRule /?\.htaccess$ - [F,L]
+RewriteRule ^app/.*\.(php|ini|db)$ - [F,L,NC]
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+# RewriteBase /crm
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule (.*) /index.php?$1 [QSA,L]
+# RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
+# RewriteRule ^(.*)$ - [E=BASE:%1]
+RewriteRule . index.php?$1 [QSA,L]
+</IfModule>
+
+ErrorDocument 403 /404

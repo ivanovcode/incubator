@@ -1,0 +1,6 @@
+{
+  "require": {
+    "dintel/php-github-webhook": "^0.2.0",
+    "vlucas/phpdotenv": "^3.3"
+  }
+}

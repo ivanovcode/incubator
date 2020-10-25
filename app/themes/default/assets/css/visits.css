@@ -1,0 +1,27 @@
+.face {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+thead tr:nth-child(n+2):nth-child(-n+4) th:nth-child(11){
+    background-color:#e1fff9;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
+}
+thead tr:nth-child(n+2):nth-child(-n+4) th:nth-child(12){
+    background-color:#d9fff8;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
+}
+
+
+
+thead tr th:nth-child(n+6):nth-child(-n+8) {
+    background-color:#f3fcff;
+}
+
+tbody tr td:nth-child(n+6):nth-child(-n+8) {
+    background-color:#f3fcff;
+}
+
